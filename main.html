@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="loader" style="display: block;">
+    <div class="wrapper">
+        <div class="smoke">
+                  <span style="--v:1;"></span>
+                  <span style="--v:2;"></span>
+                  <span style="--v:3;"></span>
+                  <span style="--v:9;"></span>
+                   <span style="--v:4;"></span>
+                  <span style="--v:5;"></span>
+                  <span style="--v:10;"></span>
+                  <span style="--v:12;"></span>
+                  <span style="--v:6;"></span>
+                  <span style="--v:7;"></span>
+                  <span style="--v:8;"></span>
+                  <span style="--v:11;"></span>
+        </div>
+          <div class="cup" >
+            <div>
+                
+            </div>
+          </div>
+    </div>
+</div>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		jQuery(function($) {
+			$('.loader').delay(10).fadeOut('slow');
+		}); 
+	});
+</script>
+
+<style>
+    body{
+        background-color: #0d0c0cba;
+    }
+   
+	.elementor-element-edit-mode .loader {
+		display: none;
+	}
+	.loader {
+       
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+		background: url('/imagem/Mug_Coffe_\ agencia.png') 50% 50% no-repeat /* #000000BA*/;
+		background-size: 200px;  /*<- Ajusta o tamanho da imagem ou logo*/
+	}
+    
+    
+.smoke{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 98px;
+    justify-content: absolute;
+    
+}
+
+.smoke span {
+    position: relative;
+    bottom: -50px;
+    display: block;
+    margin: 0 2px 160px;
+    min-width: 2px;
+    height: 50px;
+    background: #c4bece;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(6px);
+    animation-delay: calc(var(--v)*0.5s) ;
+}
+
+
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) scaleX(1);
+    }
+   15%{
+        opacity: 15;
+    }
+    50% {
+        transform: translateY(-150px) scaleX(5);
+      }
+      95%{
+        opacity: 0;
+      }
+    100% {
+        transform: translateY(-300px) scaleX(10);
+      }
+  }
+  
+ 
+
+</style>
+</body>
+</html>
